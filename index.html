@@ -1,7 +1,84 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <------------------this is where d link goes \/------------------------------>
-  <meta http-equiv='refresh' content='0; URL=https://Google.com'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Redirect Waiting Room</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh; /* Ensure the body covers full screen */
+        }
+
+        h1 {
+            font-size: 4rem;
+            color: #4CAF50;
+            margin-top: 50px;
+        }
+
+        p {
+            font-size: 1.25rem;
+            color: #555;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+
+        .loading-message {
+            font-size: 1.2rem;
+            color: #ff5722;
+            animation: fadeIn 2s ease-in-out infinite;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        footer {
+            margin-top: auto; /* Push footer to the bottom */
+            font-size: 0.875rem;
+            color: #888;
+            padding-bottom: 10px;
+        }
+
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
+<body>
+
+    <div>
+        <h1>A Little Redirect Waiting Room!</h1>
+        <p>You are currently loading into a new website, but while you wait, please enjoy something to eat or drink.</p>
+        <p class="loading-message">Hang tight, the new website is just a moment away!</p>
+    </div>
+
+    <footer>
+        <p><a href='http://www.freevisitorcounters.com' target="_blank">freecounter</a></p>
+        <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=114701735117c3ce6c6d9cce8e7da17a6b71dbaf'></script>
+        <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1258236/t/0"></script>
+    </footer>
+
+    <script>
+        // Redirect after a delay (e.g., 5 seconds)
+        setTimeout(function() {
+            window.location.href = "https://www.example.com"; // Replace with your actual redirect URL
+        }, 5000); // 5000 ms = 5 seconds
+    </script>
+
+</body>
 </html>
